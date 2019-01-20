@@ -1,0 +1,261 @@
+﻿body {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+    .main .header {
+        position: relative;
+        z-index: 9999;
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+        padding: 20px 0;
+    }
+
+        .main .header .wrapper-block {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .main .header .wrapper-block .logo {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .main .header .wrapper-block .nav {
+                width: 100%;
+            }
+
+                .main .header .wrapper-block .nav ul {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                    .main .header .wrapper-block .nav ul li {
+                        display: flex;
+                        position: relative;
+                    }
+
+                        .main .header .wrapper-block .nav ul li:last-child {
+                            border-left: 1px solid #ccc;
+                        }
+
+                        .main .header .wrapper-block .nav ul li a {
+                            display: block;
+                            font-size: 18px;
+                            line-height: 18px;
+                            text-decoration: none;
+                            color: #888;
+                            padding: 10px;
+                            transition: all 0.3s ease-in-out;
+                            cursor: pointer;
+                        }
+
+                            .main .header .wrapper-block .nav ul li a:focus, .main .header .wrapper-block .nav ul li a:hover, .main .header .wrapper-block .nav ul li a:active {
+                                color: #333;
+                            }
+
+                        .main .header .wrapper-block .nav ul li .sub {
+                            position: absolute;
+                            z-index: 99999;
+                            min-width: 150px;
+                            background: #ccc;
+                            top: 50px;
+                            display: flex;
+                            flex-direction: column;
+                            transition: all 0.3s ease-in-out;
+                            transform: translateY(-1000%);
+                        }
+
+                            .main .header .wrapper-block .nav ul li .sub:before {
+                                content: "";
+                                position: absolute;
+                                top: -10px;
+                                left: 80px;
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 0 7.5px 10px 7.5px;
+                                border-color: transparent transparent #cccccc transparent;
+                            }
+
+                            .main .header .wrapper-block .nav ul li .sub li {
+                                width: 100%;
+                            }
+
+                                .main .header .wrapper-block .nav ul li .sub li:last-child > a {
+                                    border-bottom: none;
+                                }
+
+                                .main .header .wrapper-block .nav ul li .sub li a {
+                                    width: 100%;
+                                    display: block;
+                                    padding: 15px 5px;
+                                    color: #888;
+                                    border-bottom: 1px solid #eee;
+                                    transition: all 0.3s ease-in-out;
+                                }
+
+                                    .main .header .wrapper-block .nav ul li .sub li a:hover {
+                                        background: #333;
+                                        color: #fff;
+                                    }
+
+                            .main .header .wrapper-block .nav ul li .sub.active {
+                                transform: translateY(0%);
+                                z-index: 999999999999999999;
+                            }
+
+                        .main .header .wrapper-block .nav ul li .search {
+                            color: indianred;
+                        }
+
+        .main .header.fixed {
+            position: fixed;
+            top: 0;
+        }
+
+    .main .search-bar {
+        width: calc(100% - 10px);
+        float: left;
+        padding: 5px;
+        position: absolute;
+        z-index: 9;
+        top: 102px;
+        transition: all 0.3s ease-in-out;
+        transform: translate3d(-1000%, 0, 0);
+        background: #333;
+    }
+
+        .main .search-bar .wrapper-block {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .main .search-bar .wrapper-block input[type="text"] {
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 20px 10px;
+                background: #f5f5f5;
+            }
+
+        .main .search-bar.active {
+            transform: translate3d(0, 0, 0);
+        }
+
+    .main .banner {
+        width: 100%;
+        float: left;
+        position: relative;
+        max-height: 600px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+    }
+
+        .main .banner img {
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 0.6;
+        }
+
+        .main .banner .banner-wrapper {
+            position: absolute;
+            z-index: 999;
+            font-size: 70px;
+            font-weight: bolder;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+            .main .banner .banner-wrapper a {
+                font-size: 33px;
+                width: 30%;
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+                margin: 30px 0 0 0;
+                padding: 10px;
+                background-color: #00CED1;
+                color: #ccc;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .main .banner .banner-wrapper a:hover {
+                    border-radius: 5px;
+                    background: #000;
+                    color: indianred;
+                }
+
+    .main .footer {
+        position: relative;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0;
+        background: #fff;
+    }
+
+        .main .footer p {
+            color: #ccc;
+        }
+
+    .main .overflow-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999999999999;
+        transition: all 0.3s ease;
+        transform: translate3d(0, 1000%, 0);
+    }
+
+        .main .overflow-block .close {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .main .overflow-block .overflow-block_wrapper {
+            flex: 1;
+        }
+
+            .main .overflow-block .overflow-block_wrapper p {
+                font-size: 57px;
+                text-align: center;
+            }
+
+        .main .overflow-block.show {
+            transform: translate3d(0, 0, 0);
+        }
+

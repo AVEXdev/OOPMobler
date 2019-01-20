@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Index_StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js" type="text/javascript"></script>
+    <!-- Javascript link-->
+</head>
+<body>
+
+    <main class="main">
+        <header class="header">
+            <div class="wrapper-block">
+                <div class="logo">
+                    <img src="https://s3.amazonaws.com/wp-tyler-storage/wp-content/uploads/sites/2798/2016/10/05211536/small.png" alt="logo image" />
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Home</span>
+                            </a>                         
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Shop", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Shop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>About Us</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Cart", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Cart</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="search">
+                                <i class="mdi mdi-magnify mdi-18px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="search-bar">
+            <div class="wrapper-block">
+                <input type="text" placeholder="Search..." />
+            </div>
+        </div>
+        <div class="banner">
+            <img src="https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_960_720.jpg" alt="img-banner">
+            <div class="banner-wrapper">
+                What are you looking for?
+                <a href="@Url.Action("Shop", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                    <span>Furniture</span>
+                </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>AVEXdev 2019</p>
+        </footer>
+
+        <div class="overflow-block">
+            <a href="javascript:;" class="close"><i class="mdi mdi-close-circle mdi-24px"></i></a>
+            <div class="overflow-block_wrapper">
+                <p>
+                    desperados
+                </p>
+            </div>
+        </div>
+
+
+    </main>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
