@@ -1,0 +1,211 @@
+﻿<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="~/Content/Shop_Stylesheet.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="wrapper-block">
+                <span class="nav"><p>Furniture Shop</p></span>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Hem</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Shop", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Shop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Om oss</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Kontakt</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Cart", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Varukorg</span>
+                                <a href="~/Home/Buy">Varukorg</a>
+
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-12 columns productgalleries">
+                        <div class="row">
+
+                            <div class="large-3 small-5 columns">
+
+                                <table>
+                                    <tr>
+                                        <th>Märke</th>
+                                        <th>Tillverkare</th>
+                                        <th>Färg</th>
+                                        <th>Information</th>
+                                        <th>Material</th>
+                                        <th>Pris</th>
+                                    </tr>
+
+                                    @foreach (var möbel in Model)
+                                    {
+                                    <tr>
+                                        <td>@möbel.Title</td>
+
+                                        @if (möbel is OOPMöbler.Models.Soffa)
+                                        {
+                                            <td>
+                                                @(((OOPMöbler.Models.Soffa)möbel).Author)
+                                            </td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Soffa)möbel).färg)
+                                            </td>
+                                            <td>
+                                                Antal sittplatser: @(((OOPMöbler.Models.Soffa)möbel).sittPlatser)
+                                            </td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Soffa)möbel).utsida)
+                                            </td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Soffa)möbel).pris)
+                                            </td>
+                                        }
+
+                                        @if (möbel is OOPMöbler.Models.Stol)
+                                        {
+                                            <td>
+                                                @(((OOPMöbler.Models.Stol)möbel).Author)
+                                            </td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Stol)möbel).färg)
+                                            </td>
+                                            <td>
+                                                Årtal: @(((OOPMöbler.Models.Stol)möbel).Age)
+                                                Antal ben: @(((OOPMöbler.Models.Stol)möbel).antalBen)
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Stol)möbel).pris)
+                                            </td>
+                                        }
+                                        @if (möbel is OOPMöbler.Models.Bord)
+                                        {
+                                            <td>
+                                                @(((OOPMöbler.Models.Bord)möbel).Author)
+                                            </td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Bord)möbel).färg)
+                                            </td>
+                                            <td>
+                                                Antal ben: @(((OOPMöbler.Models.Bord)möbel).antalBen)
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                @(((OOPMöbler.Models.Bord)möbel).pris)
+                                            </td>
+                                        }
+                                        <td>
+                                            @if (möbel.Count > 0)
+                                            {
+                                                <a href="~/Home/Buy/@möbel.Id">Köp</a>
+                                            }
+                                        </td>
+
+                                    </tr>
+                                    }
+                                </table>
+                                
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End Thumbnails -->
+                <!--Pagination-->
+                <div class="row">
+                    <div class="large-12 columns">
+                        <hr></hr>
+                        <div class="pagination-centered">
+                            <ul class="pagination">
+                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                <li class="current"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                <li><a href="">12</a></li>
+                                <li><a href="">13</a></li>
+                                <li class="arrow"><a href="">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--endpagination-->
+                <!-- Managed By -->
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="panel">
+                            <div class="row">
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End Managed By -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr />
+                <div class="row">
+
+                    <div class="large-6 columns">
+                        <p>© Copyright 2019 AVEXdev</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- End Footer -->
+        </div>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+</body>
+
+</html>

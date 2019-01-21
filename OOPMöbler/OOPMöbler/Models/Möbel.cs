@@ -18,17 +18,18 @@ namespace OOPMöbler.Models
         public int tempPointsInitialCount { get; set; }
         public int tempPointsBuyCount { get; set; }
         public string färg { get; set; }
+        public int pris { get; set; }
 
         public static List<Möbel> CreateData()
         {
             List<Möbel> MöbelList = new List<Möbel>();
 
-            MöbelList.Add(new Soffa { Id = 1, Title = "Erik", Author = "Ikea", sittPlatser = 4, utsida = "Läder", färg = "vit", Count = 5, InitialCount = 5 });
-            MöbelList.Add(new Soffa { Id = 2, Title = "Philip", Author = "Ikea", sittPlatser = 6, utsida = "Skin", färg = "mörkblå", Count = 4, InitialCount = 4 });
-            MöbelList.Add(new Stol { Id = 3, Title = "Sofia", Author = "Ikea", Age = 2018, antalBen = 4, färg = "vit", Count = 3, InitialCount = 3 });
-            MöbelList.Add(new Stol { Id = 4, Title = "Sofia", Author = "Ikea", Age = 2016, antalBen = 4, färg = "svart", Count = 2, InitialCount = 2 });
-            MöbelList.Add(new Bord { Id = 5, Title = "Fora", Author = "Ikea", Age = 2016, antalBen = 4, färg = "grå", Count = 1, InitialCount = 1 });
-            MöbelList.Add(new Bord { Id = 6, Title = "Fora", Author = "Ikea", Age = 2017, antalBen = 6, färg = "vit", Count = 6, InitialCount = 6 });
+            MöbelList.Add(new Soffa { Id = 1, Title = "Erik", Author = "Ikea", sittPlatser = 4, utsida = "Läder", färg = "Grå", pris = 4599, Count = 5, InitialCount = 5 });
+            MöbelList.Add(new Soffa { Id = 2, Title = "Philip", Author = "Ikea", sittPlatser = 6, utsida = "Skin", färg = "Vit", pris = 2899, Count = 4, InitialCount = 4 });
+            MöbelList.Add(new Stol { Id = 3, Title = "Sofia", Author = "Ikea", Age = 2018, antalBen = 4, färg = "Vit", Count = 3, pris = 289, InitialCount = 3 });
+            MöbelList.Add(new Stol { Id = 4, Title = "Sofia", Author = "Ikea", Age = 2016, antalBen = 4, färg = "Svart", Count = 2, pris = 229, InitialCount = 2 });
+            MöbelList.Add(new Bord { Id = 5, Title = "Fora", Author = "Ikea", Age = 2016, antalBen = 4, färg = "Grå", pris = 699, Count = 1, InitialCount = 1 });
+            MöbelList.Add(new Bord { Id = 6, Title = "Fora", Author = "Ikea", Age = 2017, antalBen = 6, färg = "Vit", pris = 499, Count = 6, InitialCount = 6 });
 
             return MöbelList;
         }

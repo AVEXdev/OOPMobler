@@ -1,33 +1,19 @@
 [
   {
-    "$type": "OOPMöbler.Models.Bord, OOPMöbler",
-    "Age": 2017,
-    "antalBen": 6,
-    "Id": 6,
-    "Title": "Fora",
-    "Author": "Ikea",
-    "Count": 5,
-    "InitialCount": 6,
-    "BuyCount": 2,
-    "Points": 48,
-    "tempPointsInitialCount": 30,
-    "tempPointsBuyCount": 18,
-    "färg": "vit"
-  },
-  {
     "$type": "OOPMöbler.Models.Soffa, OOPMöbler",
     "utsida": "Läder",
     "sittPlatser": 4,
     "Id": 1,
     "Title": "Erik",
     "Author": "Ikea",
-    "Count": 4,
+    "Count": 0,
     "InitialCount": 5,
-    "BuyCount": 1,
-    "Points": 37,
-    "tempPointsInitialCount": 25,
-    "tempPointsBuyCount": 12,
-    "färg": "vit"
+    "BuyCount": 5,
+    "Points": 45,
+    "tempPointsInitialCount": 30,
+    "tempPointsBuyCount": 15,
+    "färg": "Grå",
+    "pris": 4599
   },
   {
     "$type": "OOPMöbler.Models.Soffa, OOPMöbler",
@@ -39,10 +25,27 @@
     "Count": 2,
     "InitialCount": 4,
     "BuyCount": 2,
-    "Points": 35,
-    "tempPointsInitialCount": 20,
-    "tempPointsBuyCount": 15,
-    "färg": "mörkblå"
+    "Points": 37,
+    "tempPointsInitialCount": 25,
+    "tempPointsBuyCount": 12,
+    "färg": "Vit",
+    "pris": 2899
+  },
+  {
+    "$type": "OOPMöbler.Models.Bord, OOPMöbler",
+    "Age": 2017,
+    "antalBen": 6,
+    "Id": 6,
+    "Title": "Fora",
+    "Author": "Ikea",
+    "Count": -1,
+    "InitialCount": 3,
+    "BuyCount": 8,
+    "Points": 33,
+    "tempPointsInitialCount": 15,
+    "tempPointsBuyCount": 18,
+    "färg": "Vit",
+    "pris": 499
   },
   {
     "$type": "OOPMöbler.Models.Stol, OOPMöbler",
@@ -54,10 +57,11 @@
     "Count": 3,
     "InitialCount": 3,
     "BuyCount": 0,
-    "Points": 24,
-    "tempPointsInitialCount": 15,
+    "Points": 29,
+    "tempPointsInitialCount": 20,
     "tempPointsBuyCount": 9,
-    "färg": "vit"
+    "färg": "Vit",
+    "pris": 289
   },
   {
     "$type": "OOPMöbler.Models.Stol, OOPMöbler",
@@ -72,7 +76,8 @@
     "Points": 16,
     "tempPointsInitialCount": 10,
     "tempPointsBuyCount": 6,
-    "färg": "svart"
+    "färg": "Svart",
+    "pris": 229
   },
   {
     "$type": "OOPMöbler.Models.Bord, OOPMöbler",
@@ -87,6 +92,7 @@
     "Points": 8,
     "tempPointsInitialCount": 5,
     "tempPointsBuyCount": 3,
-    "färg": "grå"
+    "färg": "Grå",
+    "pris": 699
   }
 ]

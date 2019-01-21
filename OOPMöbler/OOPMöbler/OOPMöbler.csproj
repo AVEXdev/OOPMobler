@@ -93,6 +93,7 @@
   <ItemGroup>
     <Content Include="Content\Login_StyleSheet.css" />
     <Content Include="Content\Index_StyleSheet.css" />
+    <Content Include="Content\Shop_Stylesheet.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="Web.config" />
@@ -120,6 +121,7 @@
     <Content Include="Views\Home\Shop.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Shared\_LayoutShop.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

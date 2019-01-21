@@ -4,26 +4,56 @@
   "Name": "Alexander Johansson",
   "Email": "alex@primat.se",
   "Password": "123",
-  "BuyList": [
+  "ShoppingCart": [
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 2,
+      "pris": 0
+    },
     {
       "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
       "Id": 6,
-      "ReturnDate": "2019-02-19T01:16:07.9376114+01:00"
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 6,
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 6,
+      "pris": 0
     },
     {
       "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
       "Id": 1,
-      "ReturnDate": "2019-02-19T01:16:08.6488348+01:00"
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 1,
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 1,
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 1,
+      "pris": 0
+    },
+    {
+      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
+      "Id": 1,
+      "pris": 0
     },
     {
       "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
       "Id": 2,
-      "ReturnDate": "2019-02-19T01:16:09.2383372+01:00"
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 2,
-      "ReturnDate": "2019-02-19T01:16:09.6534515+01:00"
+      "pris": 0
     }
   ]
 }

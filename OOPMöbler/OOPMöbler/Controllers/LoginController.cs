@@ -9,6 +9,8 @@ namespace OOPMöbler.Controllers
 {
     public class LoginController : Controller
     {
+        
+        
         // GET: Login
         public ActionResult Index()
         {
@@ -23,9 +25,12 @@ namespace OOPMöbler.Controllers
                     Session["UserId"] = CurrentUser.Id;
                     return RedirectToAction("Index", "Home");
 
+
                 }
             }
+
             return View();
         }
+
     }
 }

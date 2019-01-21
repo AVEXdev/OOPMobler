@@ -4,5 +4,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Cart</h2>
+<ul>
+
+    @if (Model.UserData.ShoppingCart != null)
+    {
+        foreach (var item in Model.UserData.ShoppingCart)
+        {
+            foreach (var möbel in Model.MöbelList)
+            {
+                if (item.Id == möbel.Id)
+                {
+                    <li>@möbel.Title, @möbel.pris</li>
+                    
+                }
+            }
+        }
+    }
+
+</ul>
 

@@ -12,7 +12,7 @@ namespace OOPMöbler.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public List<Buy> BuyList { get; set; }
+        public List<Buy> ShoppingCart { get; set; }
 
         public static List<UserData> UserList = GetUsers();
 
@@ -39,7 +39,6 @@ namespace OOPMöbler.Models
             {
                 userdata = UserList.Where(x => x.Id == id).FirstOrDefault();
             }
-
             return userdata;
         }
         public static void SaveUserData(UserData user)
@@ -67,7 +66,7 @@ namespace OOPMöbler.Models
         public class Buy
         {
             public int Id;
-            public DateTime ReturnDate;
+            public int pris;
         }
     }
 }

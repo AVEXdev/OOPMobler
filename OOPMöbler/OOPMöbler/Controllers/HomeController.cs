@@ -9,11 +9,15 @@ namespace OOPMöbler.Controllers
 {
     public class HomeController : Controller
     {
+        public List<Möbel> möbellist = Möbel.GetData();
+        public UserData userdata;
+
         public ActionResult Index()
         {
             if (Session["UserId"] is int)
             {
                 userdata = UserData.GetUserData((int)Session["UserId"]);
+                Models.UserData.SaveUserData(userdata);
             }
             else
             {
@@ -31,7 +35,7 @@ namespace OOPMöbler.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-            return View();
+            return View(möbellist);
         }
 
         public ActionResult About()
@@ -71,9 +75,9 @@ namespace OOPMöbler.Controllers
             }
             return View();
         }
-        public List<Möbel> möbellist = Möbel.GetData();
-        public UserData userdata;
+        
 
+        
 
         public ActionResult Buy(int id)
         {
@@ -85,17 +89,17 @@ namespace OOPMöbler.Controllers
                     möbel.BuyCount++;
                     Models.Möbel.SaveData(möbellist);
                     userdata = UserData.GetUserData((int)Session["UserId"]);
-                    if (userdata.BuyList == null)
+                    if (userdata.ShoppingCart == null)
                     {
-                        userdata.BuyList = new List<Models.UserData.Buy>();
+                        userdata.ShoppingCart = new List<Models.UserData.Buy>();
                     }
-                    userdata.BuyList.Add(new Models.UserData.Buy { Id = möbel.Id, ReturnDate = DateTime.Now.AddDays(30) });
+                    userdata.ShoppingCart.Add(new Models.UserData.Buy { Id = möbel.Id});
                     Models.UserData.SaveUserData(userdata);
                 }
             }
             userdata = UserData.GetUserData((int)Session["UserId"]);
             ViewModel VM = ViewModel.viewmodel(möbellist, userdata);
-            return View("Index", VM);
+            return View("Cart", VM);
         }
 
         public ActionResult Return(int id)
@@ -107,10 +111,10 @@ namespace OOPMöbler.Controllers
                     möbel.Count++;
                     Models.Möbel.SaveData(möbellist);
                     userdata = UserData.GetUserData((int)Session["UserId"]);
-                    var itemToRemove = userdata.BuyList.FirstOrDefault(r => r.Id == id);
+                    var itemToRemove = userdata.ShoppingCart.FirstOrDefault(r => r.Id == id);
                     if (itemToRemove != null)
                     {
-                        userdata.BuyList.Remove(itemToRemove);
+                        userdata.ShoppingCart.Remove(itemToRemove);
                         Models.UserData.SaveUserData(userdata);
                     }
                 }
