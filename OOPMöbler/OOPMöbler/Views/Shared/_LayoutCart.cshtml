@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="~/Content/Shopping_StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="wrapper-block">
+                <span class="nav"><p>Furniture Shop</p></span>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Hem</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Shop", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Shop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Om oss</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Kontakt</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Cart", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                                <span>Varukorg</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+</body>
+</html>

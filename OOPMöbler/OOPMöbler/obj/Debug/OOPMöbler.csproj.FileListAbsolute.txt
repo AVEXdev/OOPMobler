@@ -142,3 +142,8 @@ C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\obj\Debug\OOPMöb
 C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\obj\Debug\OOPMöbler.csproj.CopyComplete
 C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\obj\Debug\OOPMöbler.dll
 C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\obj\Debug\OOPMöbler.pdb
+C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\bin\Antlr3.Runtime.dll
+C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\bin\System.Web.Optimization.dll
+C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\bin\WebGrease.dll
+C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\bin\Antlr3.Runtime.pdb
+C:\Users\Alexa\OneDrive\Dokument\STI\OOP\OOPMöbler\OOPMöbler\bin\System.Web.Optimization.xml

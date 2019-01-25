@@ -7,52 +7,12 @@
   "ShoppingCart": [
     {
       "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 2,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 6,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 6,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
       "Id": 6,
       "pris": 0
     },
     {
       "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
       "Id": 1,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 1,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 1,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 1,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 1,
-      "pris": 0
-    },
-    {
-      "$type": "OOPMöbler.Models.UserData+Buy, OOPMöbler",
-      "Id": 2,
       "pris": 0
     }
   ]

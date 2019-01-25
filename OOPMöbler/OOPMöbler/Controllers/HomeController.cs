@@ -73,7 +73,8 @@ namespace OOPMöbler.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-            return View();
+            ViewModel VM = ViewModel.viewmodel(möbellist, userdata);
+            return View(VM);
         }
         
 
@@ -102,23 +103,12 @@ namespace OOPMöbler.Controllers
             return View("Cart", VM);
         }
 
-        public ActionResult Return(int id)
+        public ActionResult Checkout()
         {
-            foreach (Models.Möbel möbel in möbellist)
-            {
-                if (möbel.Id == id)
-                {
-                    möbel.Count++;
-                    Models.Möbel.SaveData(möbellist);
-                    userdata = UserData.GetUserData((int)Session["UserId"]);
-                    var itemToRemove = userdata.ShoppingCart.FirstOrDefault(r => r.Id == id);
-                    if (itemToRemove != null)
-                    {
-                        userdata.ShoppingCart.Remove(itemToRemove);
-                        Models.UserData.SaveUserData(userdata);
-                    }
-                }
-            }
+             userdata = UserData.GetUserData((int)Session["UserId"]);
+             userdata.ShoppingCart = null;
+             Models.UserData.SaveUserData(userdata);
+            
 
 
             ViewModel VM = ViewModel.viewmodel(möbellist, userdata);
