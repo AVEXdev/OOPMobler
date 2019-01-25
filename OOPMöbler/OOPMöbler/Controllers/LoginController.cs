@@ -9,28 +9,21 @@ namespace OOPMöbler.Controllers
 {
     public class LoginController : Controller
     {
-        
-        
-        // GET: Login
+        // Inloggningscontrollern för inloggningssidan där vi sparar email, lösen och kollar ifall det stämmer
         public ActionResult Index()
         {
             if (HttpContext.Request.RequestType == "POST")
             {
                 var Email = Request.Form["email"];
                 var Password = Request.Form["password"];
-
                 var CurrentUser = UserData.GetUserData(Email);
                 if (CurrentUser != null && CurrentUser.Password == Password)
                 {
                     Session["UserId"] = CurrentUser.Id;
                     return RedirectToAction("Index", "Home");
-
-
                 }
             }
-
             return View();
         }
-
     }
 }

@@ -42,16 +42,16 @@
                 </nav>
             </div>
         </header>
-        <!-- wrapper -->
+        <!-- Här är våra produkter-->
         <div class="wrapper">
             <div class="clear"></div>
-            <!-- items -->
             <div class="items">
+                <!-- Går igenom våra möbler som finns-->
                 @foreach (var möbel in Model)
                 {
+                    <!-- Alla soffor som finns visas här-->
                     if (möbel is OOPMöbler.Models.Soffa)
                     {
-                        <!-- single item -->
                         <div class="item">
                             <img src="https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg" alt="item" />
                             <h2>Erik - Ikea - Grå</h2>
@@ -65,9 +65,9 @@
                             </form>
                         </div>
                     }
+                    <!-- Alla stolar-->
                     if (möbel is OOPMöbler.Models.Stol)
                     {
-                        <!-- single item -->
                         <div class="item">
                             <img src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376_1280.jpg" alt="item" />
                             <h2>Sofia - Ikea - Svart</h2>
@@ -83,7 +83,7 @@
                     }
                     if (möbel is OOPMöbler.Models.Bord)
                     {
-                        <!-- single item -->
+                        <!-- Alla bord-->
                         <div class="item">
                             <img src="https://cdn.pixabay.com/photo/2017/03/28/12/11/chairs-2181960_1280.jpg" alt="item" />
                             <h2>Fora - Ikea - Vit</h2>
@@ -106,6 +106,5 @@
                 <div>
                     @RenderBody()
                 </div>
-
 </body>
 </html>

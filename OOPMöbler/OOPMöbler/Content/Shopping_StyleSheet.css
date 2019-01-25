@@ -272,7 +272,9 @@
     text-align: center;
 }
 
-
+.continue {
+    text-align: center;
+}
 
 
 
@@ -281,6 +283,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 body {
@@ -343,21 +346,21 @@ h2 {
     margin-top: 100px;
 }
 button {
+
     border: 1px solid #722A1B;
     padding: 4px 14px;
     background-color: #fff;
     color: #722A1B;
     text-transform: uppercase;
-    float: right;
     margin: 5px 0;
     font-weight: bold;
     cursor: pointer;
 }
 
 span {
-    float: right;
+    text-align:center;
 }
-
+    
 .shopping-cart {
     display: inline-block;
     background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;

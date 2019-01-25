@@ -3,17 +3,11 @@
     ViewBag.Title = "Cart";
     Layout = "~/Views/Shared/_LayoutCart.cshtml";
 }
-
+<!-- Här har vi varukorgen, där vi har knappar för tillbaka till shopping, checka ut som även tar bort alla i korgen, och vi visar allt i varukorgen och chans att ta bort en vara-->
 <a href="@Url.Action("Shop", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
-    <span>Fortsätt shoppa</span>
+    <span class="continue">Fortsätt shoppa</span>
 </a>
-
-<form action="~/Home/Checkout">
-    <button class="add-to-cart" type="submit">Checkout</button>
-</form>
-
 <ul>
-
     @if (Model.UserData.ShoppingCart != null)
     {
         foreach (var item in Model.UserData.ShoppingCart)
@@ -22,12 +16,16 @@
             {
                 if (item.Id == möbel.Id)
                 {
-                    <li>@möbel.Title, @möbel.pris</li>
+                <li>
+                    Antal kvar i lager: @möbel.Count  - @möbel.Title - @möbel.Author - @möbel.färg - @möbel.pris:- <a href="~/Home/Minus/@möbel.Id" class="return">Ta bort</a>
+                </li>
 
                 }
             }
         }
     }
-
 </ul>
+<form action="~/Home/Checkout">
+    <button class="add-to-cart" type="submit">Checkout</button>
+</form>
 

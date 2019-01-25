@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Cart_StyleSheet.css" />
     <Content Include="Content\Login_StyleSheet.css" />
     <Content Include="Content\Index_StyleSheet.css" />
     <Content Include="Content\Shopping_StyleSheet.css" />
